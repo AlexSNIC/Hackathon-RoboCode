@@ -8,18 +8,18 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "compile-scss": "node-sass src/scss/index.scss src/app.css -w"
+    "compile-scss": "sass src/scss/index.scss src/app.css -w"
   },
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "bootstrap-icons": "^1.11.3",
     "firebase": "^10.12.1",
-    "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.10.2",
-    "react-spring": "^9.7.3"
+    "react-spring": "^9.7.3",
+    "sass": "^1.98.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

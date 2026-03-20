@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { db } from "../firebaseConfig";
 import { addDoc, collection } from "firebase/firestore";
 
+// ADD YOUR FIREBASE CONFIG AND UNCOMMENT THE BELLOW LINES TO ENABLE FORM FUNCTIONALITY
+// import { db } from "../firebaseConfig";
 async function addMessage(data){
-  const col = collection(db, "msg");
-  try{
-    await addDoc(col, data);
-  }
-  catch(err){
-    throw new Error(err);
-  }
+  // const col = collection(db, "msg");
+  // try{
+  //   await addDoc(col, data);
+  // }
+  // catch(err){
+  //   throw new Error(err);
+  // }
+  alert("Form functionality is disabled on download from github. Please contact us via email or social media links below. To test the form, add your Firebase config in src/firebaseConfig.js and uncomment the relevant lines in src/components/Form.jsx");
 }
 
 const Form = (props) => {

@@ -10,7 +10,7 @@ window.settings = {
   gameSpeed: 70,
   animationSpeed: 60,
 
-  currentLevel: 3, // n - 1
+  currentLevel: 0, // n - 1
   actionQueue: actionQueue,
 
   gameRunning: false,
