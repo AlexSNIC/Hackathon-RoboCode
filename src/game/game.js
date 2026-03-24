@@ -26,7 +26,9 @@ function setupGame(){
     levels[i].startPoz = {...startPoz}
     levels[i].endPoz = {...endPoz}
   };
-  
+  if(localStorage.getItem("PF__CURRENT__LEVEL") !== null)
+    window.settings.currentLevel = Number(localStorage.getItem("PF__CURRENT__LEVEL"));
+
   gameInterval = setInterval(gameLoop, settings.gameSpeed);
   buildNextLevel();
 }
@@ -60,6 +62,8 @@ function gameLoop(){
 
 function buildNextLevel(){
   settings.currentLevel++;
+  if(settings.currentLevel === 11) settings.currentLevel = 1;
+  localStorage.setItem("PF__CURRENT__LEVEL", String(settings.currentLevel - 1));
   if(settings.gameIntermission === undefined){
     settings.gameIntermission = true;
     buildLevel();
